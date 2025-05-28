@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
   bgImage: {
     width: "100%",
     height: "auto",
-    resizeMode: "stretch",
+    contentFit: "stretch",
     flex: 1,
     display: "flex",
     justifyContent: "center",

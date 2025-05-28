@@ -5,13 +5,14 @@ const RootLayout = () => {
   return (
     <SafeAreaProvider>
       <Stack
-        initialRouteName='(authentication)/enableLocation/index'
+        initialRouteName='(authentication)/welcome/index'
         screenOptions={{
           headerShown: false,
         }}
       >
         <Stack.Screen name='onboarding/index' />
         <Stack.Screen name='(authentication)/enableLocation/index' />
+        <Stack.Screen name='(authentication)/welcome/index' />
       </Stack>
     </SafeAreaProvider>
   );
