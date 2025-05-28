@@ -1,20 +1,12 @@
-import {
-  View,
-  Text,
-  StyleSheet,
-  Dimensions,
-  TouchableOpacity,
-} from "react-native";
+import { View, Text, StyleSheet, Dimensions } from "react-native";
 import AppIntroSlider from "react-native-app-intro-slider";
 import OnboardingScreenData from "../constants/OnboardingScreenData";
 import { Image } from "expo-image";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Colors } from "../constants/Colors";
-import { useState } from "react";
 
 const { width } = Dimensions.get("window");
 const OnboardingScreen = () => {
-  const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
   let renderItem = ({ item }) => {
     return (
       <View style={styles.slideWrapper}>
@@ -30,8 +22,6 @@ const OnboardingScreen = () => {
     );
   };
 
-  console.log(currentSlideIndex);
-
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <AppIntroSlider
@@ -41,7 +31,6 @@ const OnboardingScreen = () => {
         onSkip={() => console.log("skip")}
         showPrevButton={true}
         bottomButton={true}
-        onSlideChange={(index) => setCurrentSlideIndex(index)}
         renderNextButton={() => (
           <View style={styles.bottomBtn}>
             <Text style={styles.bottomBtnText}>Next</Text>
