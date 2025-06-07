@@ -6,8 +6,9 @@ import {
 } from "react-native-responsive-screen";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Colors } from "../constants/Colors";
-
+import { useRouter } from "expo-router";
 const WelcomeScreen = () => {
+  const router = useRouter();
   return (
     <SafeAreaView style={styles.container}>
       <View style={{ flex: 1, gap: 20 }}>
@@ -29,7 +30,10 @@ const WelcomeScreen = () => {
             <Text style={styles.text}>Have a better sharing experience</Text>
           </View>
           <View style={styles.bottomBtnWrapper}>
-            <TouchableOpacity style={styles.bottomBtn}>
+            <TouchableOpacity
+              onPress={() => router.push("/(authentication)/signup")}
+              style={styles.bottomBtn}
+            >
               <Text style={styles.bottomBtnText}>Create An Account</Text>
             </TouchableOpacity>
             <TouchableOpacity

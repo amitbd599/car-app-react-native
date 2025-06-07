@@ -13,6 +13,7 @@ export const Colors = {
     theme: "#08B783",
     dark: "#374151",
     white: "#fff",
+    border: "#D0D0D0",
   },
   dark: {
     text: "#64748b",
